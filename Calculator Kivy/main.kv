@@ -1,0 +1,131 @@
+<InputButton@Button>:
+    font_size: dp(30)
+
+<CalculatorScreen>:
+    id: Calculator
+    size: (480,500)
+
+    Label:
+        text: "Calculator by AghnatHS 1.0"
+        pos_hint: {"x":0,"y":.475}
+        font_size: dp(15)
+    TextInput:
+        id: calculatorInput
+        disabled: True
+        multiline: False
+        size_hint: (1,.1)
+        pos_hint: {"x":0,"y":0.85}
+        font_size: dp(28)
+    
+    BoxLayout:
+        size_hint: (1,.15)
+        pos_hint:{"x":0,"y":.7}
+        orientation: "horizontal"
+        InputButton:
+            text: "="
+            size_hint: (.38,1)
+            on_press: Calculator.calculateValue()
+        InputButton:
+            text: "<--"
+            size_hint: (.185,1)
+            on_press: Calculator.deleteValue()
+        InputButton:
+            text: "C"
+            size_hint: (.185,1)
+            on_press: Calculator.deleteValue("all")
+        InputButton:
+            text: "^x"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("^")
+    
+    BoxLayout:
+        size_hint: (1,.15)
+        pos_hint: {"x":0,"y":.55}
+        orientation: "horizontal"
+        InputButton:
+            text: "7"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("7")
+        InputButton:
+            text: "8"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("8")
+        InputButton:
+            text: "9"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("9")
+        InputButton:
+            text: "X"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("x")
+    
+    BoxLayout:
+        size_hint: (1,.15)
+        pos_hint: {"x":0,"y":.4}
+        orientation: "horizontal"
+        InputButton:
+            text: "4"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("4")
+        InputButton:
+            text: "5"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("5")
+        InputButton:
+            text: "6"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("6")
+        InputButton:
+            text: ":"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue(":")
+    BoxLayout:
+        size_hint: (1,.15)
+        pos_hint: {"x":0,"y":.25}
+        orientation: "horizontal"
+        InputButton:
+            text: "1"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("1")
+        InputButton:
+            text: "2"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("2")
+        InputButton:
+            text: "3"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("3")
+        InputButton:
+            text: "+"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("+")
+    BoxLayout:
+        size_hint: (1,.15)
+        pos_hint: {"x":0,"y":.1}
+        orientation: "horizontal"
+        InputButton:
+            text: "("
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("(")
+        InputButton:
+            text: ")"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue(")")
+        InputButton:
+            text: "0"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("0")
+        InputButton:
+            text: "."
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue(".")
+        InputButton:
+            text: "-"
+            size_hint: (.25,1)
+            on_press: Calculator.inputValue("-")
+    BoxLayout:
+        size_hint: (1,.15)
+        pos_hint: {"x":0,"y":-.025}
+        orientation: "horizontal"
+        Label:
+            text: "Build using Python and Kivy"
