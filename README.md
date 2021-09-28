@@ -1,3 +1,3 @@
 # KivyCalculator
-Just a calculator created using kivy
-Android build ready
+<br>Just a calculator created using kivy</br>
+<br>Android build ready</br>
